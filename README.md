@@ -35,83 +35,20 @@ A HTML file (e.g., portfolio.html linked below)
 
 ## Step 2: Set Bucket Policy for Public Read Access
 
-Go to **Permissions > Bucket Policy** tab and paste:(replace your-bucket-name)
+Go to **Permissions > Bucket Policy** tab and paste: 
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "PublicReadGetObject",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::your-bucket-name/*"
-    }
-  ]
-}
 
 ## Step 3: Create a CloudFront Distribution
+1. Open the CloudFront Console and click “Create Distribution”
 
-1. Open the **CloudFront Console** and click “Create Distribution”
+Under Origin domain, select your S3 static website endpoint (CloudFront will auto-fill the name)
 
-2. Under Origin domain, select your S3 static website endpoint (CloudFront will auto-fill the name)
+Origin Shield: Leave disabled
 
-3. Origin Shield: Leave disabled
+Scroll through the Default cache behavior — keep the default settings for a simple setup
 
-4. Scroll through the Default cache behavior — you can keep the default settings for a simple setup
+Web Application Firewall (WAF): Optional — skip unless you need advanced security
 
-5. **Web Application Firewall** (WAF): Optional, you can skip this unless you want advanced security
+Click “Create Distribution”
 
-6. Click “Create Distribution”
-
-Once deployed, your website will be available globally via a secure HTTPS CloudFront domain, such as: https://d12345678.cloudfront.net
-
----
-
-## Deployment Summary
-1. **Created S3 Bucket** with static website hosting enabled
-2. **Uploaded index.html** to the root of the bucket
-3. Configured **bucket policy** for public read access
-4. **Deployed CloudFront Distribution**, linked to the S3 bucket
-5. Set up **HTTPS via ACM (Amazon Certificate Manager)**
-6. Tested site accessibility through CloudFront domain
-
----
-
-## Highlights
-- Hosted a static website with Amazon S3
-- Configured secure public access to the S3 bucket using a tailored bucket policy
-- Enabled global content delivery and caching using Amazon CloudFront to reduce latency and improve load times
-- Configured HTTPS encryption via CloudFront for secure, scalable access to the static website across all regions
-- Deployed a website without the need for a traditional backend or web server
-
----
-
-## How to Reproduce
-
-To deploy a similar site yourself:
-
-1. Clone or fork this repo
-2. Create an index.html, a basic HTML website file
-3. Follow the steps in `deploy-notes.md` 
-4. Host on AWS with your own bucket and CloudFront setup
-
----
-
-## Screenshots
-
-## S3 Static Website Hosting
-![S3 static website hosting](https://github.com/user-attachments/assets/32af0c5a-dfbb-49c0-8283-4633b73da101)
-
-## AWS Cloudfront Console
-![AWS Console_Cloudfront](https://github.com/user-attachments/assets/c27c717e-2ef8-436e-89b5-e8b51b0a5e3e)
-
-## Static Website Deployed on Cloudfront
-![Cloudfront_Static website hosting](https://github.com/user-attachments/assets/19f802c6-6614-464b-8313-e3f47648b28f)
-
----
-
-🔗 [LinkedIn](https://www.linkedin.com/in/prashanthie-velmurugan/)  
-📧 vgprashanthie@gmail.com
-
+Once deployed, your website will be available globally via a secure HTTPS CloudFront domain, such as:
