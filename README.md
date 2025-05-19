@@ -35,7 +35,7 @@ A HTML file (e.g., portfolio.html linked below)
 
 ## Step 2: Set Bucket Policy for Public Read Access
 
-Go to **Permissions > Bucket Policy** tab and paste: 
+Go to **Permissions > Bucket Policy** tab and paste: (listed under bucket-policy-code)
 
 ## Step 3: Create a CloudFront Distribution
 
@@ -75,5 +75,40 @@ https://d12345678.cloudfront.net
 ## Screenshots
 
 ## S3 Static Website Hosting
+
+![S3 static website hosting](https://github.com/user-attachments/assets/ed503ff6-a6b8-4800-a3b6-3252aee3cbad)
+
+## AWS CloudFront Console 
+
+![AWS Console_Cloudfront](https://github.com/user-attachments/assets/0754681b-575a-461e-a314-1ca2bc0fd3d3)
+
+## Static Website Deployed on CloudFront
+
+![Cloudfront_Static website hosting](https://github.com/user-attachments/assets/3d08217f-0c6f-47e0-84ff-528908248643)
+
+## CODE
+
+## bucket-policy-code
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::your-bucket-name/*"
+    }
+  ]
+}
+
+## Contact
+🔗 LinkedIn – prashanthie-velmurugan
+📧 vgprashanthie@gmail.com
+
+
+
 
 
