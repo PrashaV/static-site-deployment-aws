@@ -86,7 +86,9 @@ Once deployed, your website will be available globally via a secure HTTPS CloudF
 
 ![Cloudfront_Static website hosting](https://github.com/user-attachments/assets/3d08217f-0c6f-47e0-84ff-528908248643)
 
-## CODE
+## Contact
+🔗 LinkedIn – prashanthie-velmurugan
+📧 vgprashanthie@gmail.com
 
 ## bucket-policy-code
 
@@ -104,9 +106,7 @@ Once deployed, your website will be available globally via a secure HTTPS CloudF
   ]
 }
 
-## Contact
-🔗 LinkedIn – prashanthie-velmurugan
-📧 vgprashanthie@gmail.com
+
 
 
 
