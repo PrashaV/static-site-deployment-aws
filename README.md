@@ -47,7 +47,7 @@ Open the CloudFront Console and click “Create Distribution”
 - Click “Create Distribution”
 
 Once deployed, your website will be available globally via a secure HTTPS CloudFront domain, such as:
-https://d12345678.cloudfront.net 
+[https://d12345678.cloudfront.net ](https://d306m6ixj1e2ue.cloudfront.net/)
 
 ## Deployment Summary
 
