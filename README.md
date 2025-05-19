@@ -37,18 +37,43 @@ A HTML file (e.g., portfolio.html linked below)
 
 Go to **Permissions > Bucket Policy** tab and paste: 
 
-
 ## Step 3: Create a CloudFront Distribution
-1. Open the CloudFront Console and click “Create Distribution”
 
-Under Origin domain, select your S3 static website endpoint (CloudFront will auto-fill the name)
-
-Origin Shield: Leave disabled
-
-Scroll through the Default cache behavior — keep the default settings for a simple setup
-
-Web Application Firewall (WAF): Optional — skip unless you need advanced security
-
-Click “Create Distribution”
+Open the CloudFront Console and click “Create Distribution”
+- Under Origin domain, select your S3 static website endpoint (CloudFront will auto-fill the name)
+- Origin Shield: Leave disabled
+- Scroll through the Default cache behavior — keep the default settings for a simple setup
+- Web Application Firewall (WAF): Optional — skip unless you need advanced security
+- Click “Create Distribution”
 
 Once deployed, your website will be available globally via a secure HTTPS CloudFront domain, such as:
+https://d12345678.cloudfront.net 
+
+## Deployment Summary
+
+- Created S3 Bucket with static website hosting enabled
+- Uploaded index.html to the root of the bucket
+- Configured bucket policy for secure public read access
+- Deployed CloudFront Distribution, linked to the S3 bucket
+- Set up HTTPS using ACM (Amazon Certificate Manager)
+- Tested site accessibility through the CloudFront domain
+
+## Highlights
+- Hosted a static website with Amazon S3
+- Configured secure public access via a tailored bucket policy
+- Enabled global content delivery and caching using Amazon CloudFront to reduce latency
+- Configured HTTPS encryption via CloudFront for secure, scalable access
+- Deployed a website without a traditional backend or web server
+
+## To deploy a similar site:
+
+- Clone or fork this repo
+- Create an index.html file (basic HTML website)
+- Follow the steps in deploy-notes.md
+- Host your version on AWS using an S3 bucket and CloudFront
+
+## Screenshots
+
+## S3 Static Website Hosting
+
+
