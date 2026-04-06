@@ -1,5 +1,4 @@
 # AWS-static-site-deployment
-
 This project showcases a fully deployed static website hosted on **Amazon S3** and distributed globally using **CloudFront**. It's designed to be secure, scalable, and fast — perfect for personal portfolios or small static applications.
 
 ## Live Demo
